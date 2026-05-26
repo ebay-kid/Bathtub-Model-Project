@@ -1,5 +1,4 @@
-import 'package:bathtub_models/presentation/screens/exact_location_map_screen.dart';
-import 'package:bathtub_models/presentation/screens/tub_location_map_screen.dart';
+import 'presentation/screens/main_dashboard.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,32 +10,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MainScreen(),
-    );
-  }
-}
-
-class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Bathtub Models'),
+    return MaterialApp(
+      title: 'Bathtub Model',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 33, 81, 120),
+          primary: const Color.fromARGB(255, 0, 10, 18),
+        ),
+        useMaterial3: true,
       ),
-      body: const Column(
-        children: [
-          Expanded(
-            child: ExactLocationMapScreen(),
-          ),
-          SizedBox(height: 4),
-          Expanded(
-            child: TubLocationMapScreen(),
-          ),
-        ],
-      ),
+      home: const MainDashboard(),
     );
   }
 }
