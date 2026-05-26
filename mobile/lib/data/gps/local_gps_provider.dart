@@ -14,9 +14,10 @@ class LocalGpsProvider {
 
   void _runLocInitIfNotRunYet() async {
     if (!_locationServiceInitialized) {
-      var res =
-          await _initLocationService(); // todo: add error messaging if we're denied
+      var res = await _initLocationService();
+      // todo: add error messaging if we're denied
       if (res) {
+        // do we ever need to cancel the stream?
         Geolocator.getPositionStream().listen((Position? position) {
           if (position != null) {
             _position = position;

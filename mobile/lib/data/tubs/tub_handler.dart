@@ -29,7 +29,7 @@ class TubHandler {
   /// Note that only the first matching result will be accepted.
   Tub? getCurrentTub(LatLng currentLoc, [Tub? prev]) {
     if (prev != null) {
-      if(prev.tubContainsLatLon(currentLoc)) {
+      if (prev.tubContainsLatLon(currentLoc)) {
         return prev;
       }
 
