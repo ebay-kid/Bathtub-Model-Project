@@ -7,9 +7,7 @@ class MapScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Map')),
-      body: FlutterMap(
+    return FlutterMap(
         options: const MapOptions(
           initialCenter: LatLng(51.5, -0.09),
           initialZoom: 13,
@@ -20,7 +18,6 @@ class MapScreen extends StatelessWidget {
             userAgentPackageName: 'com.example.bathtub_models',
           ),
         ],
-      ),
     );
   }
 }
