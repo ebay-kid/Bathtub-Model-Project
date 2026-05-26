@@ -15,7 +15,9 @@ dependencies:
   google_fonts: ^8.0.2
   latlong2: ^0.9.1
   geolocator:
-    path: ../flutter-geolocator/geolocator
+    git:
+      url: https://github.com/ebay-kid/flutter-geolocator
+      path: geolocator/
 
 dev_dependencies:
   flutter_test:
