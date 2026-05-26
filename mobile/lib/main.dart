@@ -1,4 +1,4 @@
-import 'package:bathtub_models/presentation/screens/main_dashboard.dart';
+import 'presentation/screens/main_dashboard.dart';
 import 'package:flutter/material.dart';
 
 void main() {
