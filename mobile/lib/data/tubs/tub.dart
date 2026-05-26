@@ -9,8 +9,8 @@ abstract class Tub {
 
   Tub({required this.tubID});
 
-  /// Returns true when the object is in the tub, false otherwise.
-  bool isInTub(LatLng ll);
+  /// Returns true when the provided latlong is in this tub, false otherwise.
+  bool tubContainsLatLon(LatLng ll);
 
   /// Returns the set of neighbors of this Tub.
   /// A more precise list of neighbors will improve efficiency of Tub operations.

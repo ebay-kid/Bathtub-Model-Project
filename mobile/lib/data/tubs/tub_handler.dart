@@ -29,15 +29,19 @@ class TubHandler {
   /// Note that only the first matching result will be accepted.
   Tub? getCurrentTub(LatLng currentLoc, [Tub? prev]) {
     if (prev != null) {
+      if(prev.tubContainsLatLon(currentLoc)) {
+        return prev;
+      }
+
       for (Tub t in prev.getNeighbors()) {
-        if (t.isInTub(currentLoc)) {
+        if (t.tubContainsLatLon(currentLoc)) {
           return t;
         }
       }
     }
 
     for (Tub t in tubs.tubs) {
-      if (t.isInTub(currentLoc)) {
+      if (t.tubContainsLatLon(currentLoc)) {
         return t;
       }
     }

@@ -15,7 +15,7 @@ class DummyTub extends Tub {
   }
 
   @override
-  bool isInTub(LatLng ll) {
+  bool tubContainsLatLon(LatLng ll) {
     return min(r.$1.latitude, r.$2.latitude) < ll.latitude &&
         ll.latitude < max(r.$1.latitude, r.$2.latitude) &&
         min(r.$1.longitude, r.$2.longitude) < ll.longitude &&
